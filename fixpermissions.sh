@@ -25,13 +25,13 @@ find "$TREE1" \( -type d -o -type f \) -print | \
 			g2=`echo "$3"`
 
 			if [ ${p1} != ${p2} ]; then
-				( echo old perms were ${p2} new perms are ${p1} ); set -x ; chmod "${p1}" "${tgt}" )
+				( echo old perms were ${p2} new perms are ${p1} ; set -x ; chmod "${p1}" "${tgt}" )
 			fi
 			if [ ${o1} != ${o2} ]; then
-				( echo old owner was ${o2} new owner is ${o1} ); set -x ; chown "${o1}" "${tgt}" )
+				( echo old owner was ${o2} new owner is ${o1} ; set -x ; chown "${o1}" "${tgt}" )
 			fi
 			if [ ${g1} != ${g2} ]; then
-				( echo old group was ${g2} new group is ${g1} ); set -x ; chgrp "${g1}" "${tgt}" )
+				( echo old group was ${g2} new group is ${g1} ; set -x ; chgrp "${g1}" "${tgt}" )
 			fi
 		fi
 	done
