@@ -1,5 +1,6 @@
 #!/bin/bash
-# This was lifted from somewhere on the internet, and modified to work with Apple's stat tool
+# This idea was lifted from somewhere on the internet
+# and then updated to work with Apple's stat tool
 
 TREE1="$1"
 TREE2="$2"
